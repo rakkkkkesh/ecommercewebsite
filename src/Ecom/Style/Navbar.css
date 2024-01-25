@@ -1,0 +1,119 @@
+.Navbar {
+  background-color: black;
+  padding: 10px;
+  border-bottom: 2px solid rgb(252, 17, 217);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px 0 0;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+}
+
+.nav-link {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: lightcoral;
+  transform: scale(1.2);
+}
+
+.search-container {
+  margin-right: 10px;
+}
+
+input {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 200px;
+  margin-right: 5px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid rgb(252, 17, 217);
+}
+
+
+
+.nav-content1, .nav-content2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-link {
+  position: relative;
+}
+
+.fa-cart-plus {
+  font-size: 25px;
+}
+
+sup {
+  background-color: #ffcc00;
+  border: 2px solid cyan;
+  color: #333;
+  padding: 2px 5px;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 12px;
+}
+
+#check,.checked{
+  position: sticky;
+  top: 15px;
+  left: 5%;
+  font-size: larger;
+display: none;
+}
+
+.search-container{
+  margin: 0 40px 0 40px;
+}
+
+.links{
+  margin: 20px;
+}
+
+.list{
+  display: flex;
+}
+
+
+
+@media screen and (max-width:800px) {
+  .list{
+      height: 100vh;
+      width: 60%;
+      background: linear-gradient(black,grey);
+      flex-direction: column;
+      position: fixed;
+      top: 45px;
+      left:-100%;
+      transition: all 2s;
+  }
+
+  .checked{
+      display: block;
+  
+  }
+  #check:checked~div{
+  left: 0;
+  }
+
+  
+}

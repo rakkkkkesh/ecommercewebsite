@@ -1,0 +1,86 @@
+.Home {
+  padding: 100px 20px 20px;
+}
+
+.Homeheader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.Homeheader img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.legend {
+  border: 2px solid aqua;
+}
+
+.Homeheader h1 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.Homeheader p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.Sec {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.Homeheader button {
+  padding: 10px 15px;
+  background-color: blue;
+  color: white !important;
+  border: 2px solid rgb(252, 17, 217) !important;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+.Homeheader button:hover {
+  background-color: rgb(11, 11, 208);
+  transform: scale(1.05);
+}
+
+.added {
+  background-color: #27ae60 !important;
+}
+
+.popup-p {
+  background-color: #4caf50;
+  color: white;
+  text-transform: capitalize;
+  border: 2px solid aquamarine;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  10%,
+  90% {
+    opacity: 1;
+  }
+}

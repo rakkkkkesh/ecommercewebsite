@@ -1,0 +1,159 @@
+.cart {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse; 
+}
+
+th,
+td {
+  border: none;
+  padding: 10px;
+}
+
+span{
+  display:none;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+thead td {
+  font-weight: bold;
+  text-align: center;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #fff;
+  border-collapse: collapse;
+  border: 2px solid #ddd;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: background-color 0.3s;
+}
+
+.button {
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #dfdada;
+}
+
+.google-pay-button {
+  display: inline-block;
+  height: 40px;
+  padding: 0 14px;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.google-pay-button:hover {
+  background-color: #3367d6;
+}
+
+.google-pay-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.3);
+}
+
+
+@media only screen and (max-width: 768px) {
+  table {
+    font-size: 14px;
+    border: none;
+    border-top: 2px solid rgb(195, 24, 238);
+  }
+
+  th, td {
+    padding: 10px;
+    margin: 2px;
+  }
+
+  tbody{
+    margin-bottom: 20px;
+  }
+  tbody tr{
+    border-bottom: 2px solid rgb(195, 24, 238);
+    margin-bottom: 20px;
+  }
+
+  span{
+    display:inline-block;
+    margin: 10px;
+  }
+
+  .google-pay-button {
+    font-size: 14px;
+    padding: 0 10px;
+    height: 30px;
+  }
+
+  thead tr{
+    display: none;
+  }
+  
+  tbody td {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .btns{
+    display: block;
+  }
+
+  .btnr{
+    margin: 0 30%;
+  }
+
+  .tdimg{
+    margin: 60px 20% 0;
+  }
+  tbody td img {
+    height: 150px;
+    width: 150px;
+    display: block;
+  }
+
+  tfoot td {
+    display: block;
+    text-align: left;
+  }
+
+  tfoot td button {
+    width: 100%;
+  }
+
+  h2, h4 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
