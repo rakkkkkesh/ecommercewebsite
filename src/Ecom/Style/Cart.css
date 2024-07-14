@@ -1,10 +1,20 @@
 .cart {
   width: 80%;
   margin: 20px auto;
+  margin-top: 100px;
   padding: 20px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3{
+  font-weight: normal !important;
 }
 
 table {
@@ -101,14 +111,20 @@ button:hover {
   tbody{
     margin-bottom: 20px;
   }
+  
   tbody tr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-bottom: 2px solid rgb(195, 24, 238);
     margin-bottom: 20px;
   }
 
   span{
+    font-weight: bold;
     display:inline-block;
-    margin: 10px;
+    margin: 5px;
   }
 
   .google-pay-button {
@@ -143,17 +159,15 @@ button:hover {
     display: block;
   }
 
+  tfoot{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
   tfoot td {
     display: block;
-    text-align: left;
-  }
-
-  tfoot td button {
-    width: 100%;
-  }
-
-  h2, h4 {
     text-align: center;
-    margin-bottom: 20px;
   }
 }

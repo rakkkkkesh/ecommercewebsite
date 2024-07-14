@@ -1,11 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from './Navbar'
-import Home from './Home'
-import Cart from './Cart'
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './Navbar';
+import Home from './Home';
+import Gallery from './Gallery';
+import Contact from './Contact';
+import About from './About';
+import Cart from './Cart';
+import ItemDetails from './ItemDetails';
+
 const App = () => {
-  const [show, setShow] = useState(true)
-  const [search, setSearch] = useState('')
-  const [cart, setCart] = useState([])
+  const [show, setShow] = useState(true);
+  const [search, setSearch] = useState('');
+  const [cart, setCart] = useState([]);
   const [addedToCart, setAddedToCart] = useState([]);
 
   useEffect(() => {
@@ -14,10 +20,10 @@ const App = () => {
   }, [cart]);
 
   const handleChange = (item, d) => {
-    const updatedCart = cart.map(cartItem => 
+    const updatedCart = cart.map(cartItem =>
       cartItem.id === item.id ? { ...cartItem, amount: cartItem.amount + d } : cartItem
     );
-    setCart(updatedCart);
+    setCart(updatedCart.filter(cartItem => cartItem.amount > 0)); // Remove items with amount 0
   };
 
   const handleClick = (item) => {
@@ -27,14 +33,32 @@ const App = () => {
   };
 
   return (
-    <div className='App'>
-      <Navbar setShow={setShow} setSearch={setSearch} size={cart.length} />
-      {show ? (
-        <Home search={search} handleClick={handleClick} addedToCart={addedToCart} />
-      ) : (
-        <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
-      )}
-    </div>
+    <Router>
+      <div className='App'>
+        <Navbar setShow={setShow} setSearch={setSearch} size={cart.length} />
+        <Routes>
+          <Route
+            path="/"
+            element={<Home search={search} handleClick={handleClick} addedToCart={addedToCart} />}
+          />
+           <Route path="/gallery" element={<Gallery />} />
+          <Route
+            path="/item/:id"
+            element={<ItemDetails handleClick={handleClick} addedToCart={addedToCart} />}
+          />
+           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route
+            path="/cart"
+            element={<Cart cart={cart} setCart={setCart} handleChange={handleChange} />}
+          />
+          <Route
+            path="/details/:id"
+            element={<ItemDetails handleClick={handleClick} addedToCart={addedToCart} />}
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

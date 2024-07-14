@@ -1,0 +1,32 @@
+.gallerydetails{
+    margin-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px  red;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .gallery-item{
+    margin: 20px;
+    padding: 50px;
+    border-radius: 10px;
+    border: 2px solid rgb(249, 12, 249);
+  }
+
+  .gallery-item img {
+    width: 300px;
+    height: 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  

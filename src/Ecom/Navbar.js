@@ -1,35 +1,5 @@
-// import React from 'react';
-// import './Style/Navbar.css';
-
-// const Navbar = ({ setShow, setSearch, size }) => {
-//   return (
-//     <div className='Navbar'>
-//       <nav>
-//       <label for="check" class="checked"><i class="fa-solid fa-bars"></i></label>
-//             <input type="checkbox" id="check"/>
-//         <div className='list'>
-//         <div className='nav-link links' onClick={() => setShow(true)}>Home</div>
-//         <div className='nav-link links'>About</div>
-//         <div className='nav-link links'>Gallery</div>
-//         <div className='nav-link links'>Contact</div>
-//         </div>
-//         <div className='search-container'>
-//           <input type='text' placeholder='Search' onChange={(e) => setSearch(e.target.value)} />
-//         </div>
-//         <div className='nav-link cart-link' onClick={() => setShow(false)}>
-//           <i class="fa-solid fa-cart-plus"></i> <sup>{size}</sup>
-//         </div>
-//       </nav>
-
-
-//     </div>
-//   );
-// }
-
-// export default Navbar;
-
-
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Style/Navbar.css';
 
 const Navbar = ({ setShow, setSearch, size }) => {
@@ -49,19 +19,19 @@ const Navbar = ({ setShow, setSearch, size }) => {
 
           <input type="checkbox" id="check" checked={menuOpen} onChange={() => { }} />
           <div className={`list ${menuOpen ? 'menu-open' : ''}`} onClick={handleMenuToggle}>
-            <div className='nav-link links' onClick={() => setShow(true)}>Home</div>
-            <div className='nav-link links'>About</div>
-            <div className='nav-link links'>Gallery</div>
-            <div className='nav-link links'>Contact</div>
+            <Link to="/" className='nav-link links' onClick={() => setShow(true)}>Home</Link>
+            <Link to="/gallery" className='nav-link links'>Gallery</Link>
+            <Link to="/contact" className='nav-link links'>Contact</Link>
+            <Link to="/about" className='nav-link links'>About</Link>
           </div>
         </div>
         <div className='nav-content2'>
           <div className='search-container'>
             <input type='text' placeholder='Search' onChange={(e) => setSearch(e.target.value)} />
           </div>
-          <div className='nav-link cart-link' onClick={() => setShow(false)}>
+          <Link to="/cart" className='nav-link cart-link' onClick={() => setShow(false)}>
             <i className="fa-solid fa-cart-plus"></i> <sup>{size}</sup>
-          </div>
+          </Link>
         </div>
       </nav>
     </div>

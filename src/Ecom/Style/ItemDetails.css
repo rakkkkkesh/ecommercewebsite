@@ -1,21 +1,107 @@
 .ItemDetails {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to top, rgb(0, 162, 255), purple);
+  height: auto;
+  min-height: 90h;
+  width: 100%;
+}
+
+.ItemDetailsMain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 50%;
+  background: linear-gradient(to top, rgb(255, 72, 0), rgb(249, 27, 249));
+  font-family: Arial, sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 40px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.ItemDetails img {
+  margin: 5px 0 5px;
+  width: 250px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.ItemDetails h1 {
+  font-size: 1.5em;
+  margin: 10px 0 0;
+}
+
+.ItemDetails .ItemDetailsSubMain {
+  width: 50%;
+  text-transform:capitalize;
+}
+
+.ItemDetails .ItemDetailsSubMain .description {
+  margin-bottom: 20px;
+}
+
+.ItemDetails .btn2 {
+  padding: 10px 15px;
+  background-color: blue;
+  color: white !important;
+  border: 2px solid rgb(7, 239, 196) !important;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+.ItemDetails .btn2:hover, .btn-back:hover {
+  transform: scale(1.05);
+}
+
+.ItemDetails .btn2.added {
+  background-color: #27ae60 !important;
+}
+
+.popup-p {
+  background-color: #4caf50;
+  color: white;
+  text-transform: capitalize;
+  border: 2px solid aquamarine;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+.ItemDetails .btn-back {
+  background-color: rgb(173, 189, 248);
+  border: 2px solid rgb(7, 146, 239) !important;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .9rem;
+  margin: 5px;
+  color: blue;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+@keyframes fadeInOut {
+
+  0%,
+  100% {
+    opacity: 0;
   }
-  
-  .ItemDetails img {
-    max-width: 100%;
-    height: auto;
+
+  10%,
+  90% {
+    opacity: 1;
   }
-  
-  .ItemDetails h1 {
-    margin-top: 20px;
-    font-size: 2em;
-  }
-  
-  .ItemDetails p {
-    margin: 10px 0;
-  }
-  
+}
