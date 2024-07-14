@@ -1,23 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Data from './Data';
 import Card from './Card';
 import './Style/Home.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
-const Home = ({ search, handleClick }) => {
+const Home = ({ search, handleClick, addedToCart }) => {
   const filteredData = Data.filter((item) =>
     item.title.toLowerCase().includes(search.toLowerCase()) || item.description.toLowerCase().includes(search.toLowerCase()) || item.category.toLowerCase().includes(search.toLowerCase())
   );
-
-  const [addedToCart, setAddedToCart] = useState([]);
-
-  const handleAddToCart = (item) => {
-    if (!addedToCart.includes(item.id)) {
-      handleClick(item);
-      setAddedToCart((prev) => [...prev, item.id]);
-    }
-  };
   
   return (
     <div className='Home'>
@@ -39,7 +30,7 @@ const Home = ({ search, handleClick }) => {
                   <i className="fa-solid fa-star" style={{ color: 'yellow', marginLeft: '5px' }}></i>
                 </p>
                 <button
-                  onClick={() => handleAddToCart(item)}
+                  onClick={() => handleClick(item)}
                   disabled={addedToCart.includes(item.id)}
                   className={addedToCart.includes(item.id) ? 'added' : ''}
                 >
@@ -59,7 +50,7 @@ const Home = ({ search, handleClick }) => {
         {filteredData.map((item) => (
           <Card
             key={item.id}
-            handleClick={() => handleAddToCart(item)}
+            handleClick={() => handleClick(item)}
             item={item}
             addedToCart={addedToCart.includes(item.id)}
           />
