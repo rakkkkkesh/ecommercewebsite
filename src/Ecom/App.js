@@ -38,7 +38,7 @@ const App = () => {
         <Navbar setShow={setShow} setSearch={setSearch} size={cart.length} />
         <Routes>
           <Route
-            path="/"
+            path="/ecommercewebsite"
             element={<Home search={search} handleClick={handleClick} addedToCart={addedToCart} />}
           />
            <Route path="/gallery" element={<Gallery />} />

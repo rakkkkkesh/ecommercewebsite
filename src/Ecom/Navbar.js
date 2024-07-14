@@ -19,7 +19,7 @@ const Navbar = ({ setShow, setSearch, size }) => {
 
           <input type="checkbox" id="check" checked={menuOpen} onChange={() => { }} />
           <div className={`list ${menuOpen ? 'menu-open' : ''}`} onClick={handleMenuToggle}>
-            <Link to="/" className='nav-link links' onClick={() => setShow(true)}>Home</Link>
+            <Link to="/ecommercewebsite" className='nav-link links' onClick={() => setShow(true)}>Home</Link>
             <Link to="/gallery" className='nav-link links'>Gallery</Link>
             <Link to="/contact" className='nav-link links'>Contact</Link>
             <Link to="/about" className='nav-link links'>About</Link>
