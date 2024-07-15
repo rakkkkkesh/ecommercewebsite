@@ -17,9 +17,6 @@ View detailed information about each product, including images, descriptions, pr
 **Shopping Cart:** 
 Add products to the shopping cart and proceed to checkout.
 
-**User Authentication:** 
-Sign up and log in to manage orders and account information.
-
 **Responsive Design:** 
 Optimized for various devices, ensuring a consistent experience on desktops, tablets, and mobile devices.
 
@@ -35,9 +32,6 @@ For styling the application and ensuring a responsive design.
 
 **React Router:** 
 For navigating between different pages of the website.
-
-**Axios:** 
-For making HTTP requests to fetch and send data to the backend.
 
 **React Hooks:** 
 To manage state and lifecycle methods in functional components.
