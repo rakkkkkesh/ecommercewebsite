@@ -1,7 +1,7 @@
 # E-Commerce Website
 
 ## Overview
-**This project is an eCommerce website built using React and CSS.**
+**This project is an E-Commerce website built using React and CSS.**
 
 **It provides a seamless and interactive shopping experience for users, featuring a range of components essential for online shopping.**
 
