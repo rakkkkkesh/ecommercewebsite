@@ -19,12 +19,13 @@ const App = () => {
     setAddedToCart(cart.map(item => item.id));
   }, [cart]);
 
-  const handleChange = (item, d) => {
-    const updatedCart = cart.map(cartItem =>
-      cartItem.id === item.id ? { ...cartItem, amount: cartItem.amount + d } : cartItem
-    );
-    setCart(updatedCart.filter(cartItem => cartItem.amount > 0)); // Remove items with amount 0
-  };
+const handleChange = (item, d) => {
+  const updatedCart = cart.map(cartItem =>
+    cartItem.id === item.id ? { ...cartItem, amount: Math.max(cartItem.amount + d, 0) } : cartItem
+  );
+  setCart(updatedCart);
+};
+
 
   const handleClick = (item) => {
     if (!cart.some(cartItem => cartItem.id === item.id)) {
@@ -35,7 +36,7 @@ const App = () => {
   return (
     <Router>
       <div className='App'>
-        <Navbar setShow={setShow} setSearch={setSearch} size={cart.length} />
+        <Navbar show={show} setShow={setShow} setSearch={setSearch} size={cart.length} />
         <Routes>
           <Route
             path="/ecommercewebsite"
