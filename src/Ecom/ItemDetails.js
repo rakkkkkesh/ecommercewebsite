@@ -53,7 +53,7 @@ const ItemDetails = ({ handleClick, addedToCart }) => {
             <p className='popup-p'>Item added to cart successfully!</p>
           </div>
         )}
-        <Link to="/" className="btn-back">Back to Home</Link>
+        <Link to="/ecommercewebsite" className="btn-back">Back to Home</Link>
       </div>
     </div>
   );

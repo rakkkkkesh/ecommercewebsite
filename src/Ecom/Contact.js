@@ -2,7 +2,8 @@ import React from 'react';
 import './Style/Contact.css'
 const Contact = () => {
   return (
-    <div className="contact">
+    <div className='mainContact'>
+      <div className="contact">
       <h2>Contact Us</h2>
       <p>Have questions or feedback? We'd love to hear from you!</p>
       <form>
@@ -22,6 +23,7 @@ const Contact = () => {
           <button type="submit">Submit</button>
         </div>
       </form>
+    </div>
     </div>
   );
 };

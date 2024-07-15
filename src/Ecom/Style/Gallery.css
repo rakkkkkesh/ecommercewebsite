@@ -1,5 +1,5 @@
 .gallerydetails{
-    margin-top: 100px;
+    margin: 100px 0 20px;
     text-align: center;
     text-transform: uppercase;
     text-shadow: 5px 5px 5px  red;
@@ -10,11 +10,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
   }
   
   .gallery-item{
-    margin: 20px;
     padding: 50px;
     border-radius: 10px;
     border: 2px solid rgb(249, 12, 249);
@@ -28,5 +27,12 @@
   
   .gallery-item:hover img {
     transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    .gallery-item img {
+      width: 200px;
+      height: 200px;
+    }
   }
   

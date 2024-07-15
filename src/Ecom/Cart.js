@@ -33,7 +33,7 @@ const Cart = ({ cart, setCart, handleChange }) => {
       {cart.length === 0 ? (
         <>
           <h3>Your cart is empty.</h3>
-          <h3>Go to <Link to="/">Home Page</Link> and add items to your cart.</h3>
+          <h3>Go to <Link to="/ecommercewebsite">Home Page</Link> and add items to your cart.</h3>
         </>
       ) : (
         <>
