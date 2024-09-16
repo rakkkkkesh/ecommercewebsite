@@ -1,0 +1,74 @@
+.shipping-info-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 100px auto 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shipping-info-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .shipping-info-section {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+  }
+  
+  .shipping-info-heading {
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+  }
+  
+  .shipping-info-description {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .shipping-info-section:last-of-type {
+    border-bottom: none;
+  }  
+
+  @media (max-width: 768px) {
+    .shipping-info-container {
+      margin: 50px auto 10px;
+      padding: 15px;
+    }
+    
+    .shipping-info-container h1 {
+      font-size: 1.5em;
+    }
+    
+    .shipping-info-heading {
+      font-size: 1.1em;
+    }
+    
+    .shipping-info-description {
+      font-size: 0.9em;
+    }
+  }
+    
+  @media (max-width: 480px) {
+    .shipping-info-container {
+      padding: 20px;
+    }
+    
+    .shipping-info-container h1 {
+      font-size: 1.2em;
+    }
+    
+    .shipping-info-heading {
+      font-size: 1em;
+    }
+    
+    .shipping-info-description {
+      font-size: 0.8em;
+    }
+  }
+  

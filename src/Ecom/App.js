@@ -2,11 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
+import Footer from './Footer';
 import Gallery from './Gallery';
 import Contact from './Contact';
 import About from './About';
+import FAQ from './FAQ';
 import Cart from './Cart';
 import ItemDetails from './ItemDetails';
+import Returns from './Returns';
+import ShippingInfo from './ShippingInfo';
+import PrivacyPolicy from './PrivacyPolicy';
+import TermsOfService from './TermsOfService';
 
 const App = () => {
   const [show, setShow] = useState(true);
@@ -57,7 +63,13 @@ const handleChange = (item, d) => {
             path="/details/:id"
             element={<ItemDetails handleClick={handleClick} addedToCart={addedToCart} />}
           />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/returns" element={<Returns />} />
+          <Route path="/shipping" element={<ShippingInfo />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

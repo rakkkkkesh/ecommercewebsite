@@ -1,0 +1,132 @@
+.footer {
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .footer-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+  }
+  
+  .footer-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin: 5px 0;
+  }
+  
+  .footer-links a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-media-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-media-icons a {
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  .social-media-icons a:hover {
+    color: #007bff;
+  }
+  
+  .footer-contact {
+    font-size: 14px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }  
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .footer-section {
+      margin: 10px 0;
+      text-align: center;
+    }
+    
+    .footer-title {
+      font-size: 16px;
+    }
+    
+    .footer-links li {
+      margin: 10px 0;
+    }
+    
+    .social-media-icons {
+      justify-content: center;
+    }
+    
+    .social-media-icons a {
+      font-size: 18px;
+    }
+    
+    .footer-contact {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-container {
+      padding: 10px;
+    }
+    
+    .footer-title {
+      font-size: 14px;
+    }
+    
+    .footer-links li {
+      margin: 8px 0;
+    }
+    
+    .social-media-icons a {
+      font-size: 16px;
+    }
+    
+    .footer-contact {
+      font-size: 10px;
+    }
+
+    .footer-contact p{
+      margin: 20px;
+    }
+    
+    .footer-bottom {
+      font-size: 12px;
+    }
+  }
+  

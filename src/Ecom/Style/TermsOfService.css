@@ -1,0 +1,73 @@
+.terms-of-service-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin: 100px auto 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .terms-of-service-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .terms-of-service-section {
+    margin-bottom: 20px;
+  }
+  
+  .terms-of-service-heading {
+    font-size: 1.8rem;
+    color: #2a2a2a;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 5px;
+  }
+  
+  .terms-of-service-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .terms-of-service-container {
+      padding: 15px;
+    }
+    
+    .terms-of-service-container h1 {
+      font-size: 2rem;
+    }
+    
+    .terms-of-service-heading {
+      font-size: 1.6rem;
+    }
+    
+    .terms-of-service-description {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .terms-of-service-container {
+        margin-top: 40px;
+      padding: 20px;
+    }
+    
+    .terms-of-service-container h1 {
+      font-size: 1.5rem;
+    }
+    
+    .terms-of-service-heading {
+      font-size: 1.4rem;
+    }
+    
+    .terms-of-service-description {
+      font-size: 0.8rem;
+    }
+  }
+  
