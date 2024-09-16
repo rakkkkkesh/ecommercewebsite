@@ -1,5 +1,6 @@
 import React from 'react';
 import './Style/Footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -17,10 +18,10 @@ const Footer = () => {
         <div className="footer-section">
           <h2 className="footer-title">Customer Service</h2>
           <ul className="footer-links">
-            <li><a href="/returns">Returns</a></li>
-            <li><a href="/shipping">Shipping Info</a></li>
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
-            <li><a href="/terms-of-service">Terms of Service</a></li>
+            <li><Link to="/returns">Returns</Link></li>
+            <li><Link to="/shipping">Shipping Info</Link></li>
+            <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+            <li><Link to="/terms-of-service">Terms of Service</Link></li>
           </ul>
         </div>
 
@@ -36,6 +37,7 @@ const Footer = () => {
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram"></i>
             </a>
+            
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin-in"></i>
             </a>

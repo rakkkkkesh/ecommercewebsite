@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Data from './Data';
 import Card from './Card';
 import './Style/Home.css';
@@ -6,9 +6,31 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
 const Home = ({ search, handleClick, addedToCart }) => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupItemId, setPopupItemId] = useState(null);
+
   const filteredData = Data.filter((item) =>
     item.title.toLowerCase().includes(search.toLowerCase()) || item.description.toLowerCase().includes(search.toLowerCase()) || item.category.toLowerCase().includes(search.toLowerCase())
   );
+
+  useEffect(() => {
+    if (popupItemId !== null) {
+      const timer = setTimeout(() => {
+        setShowPopup(false);
+        setPopupItemId(null);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [popupItemId]);
+
+  const handleAddToCart = (item) => {
+    if (!addedToCart.includes(item.id)) {
+      handleClick(item);
+      setPopupItemId(item.id);
+      setShowPopup(true);
+    }
+  };
   
   return (
     <div className='Home'>
@@ -30,13 +52,13 @@ const Home = ({ search, handleClick, addedToCart }) => {
                   <i className="fa-solid fa-star" style={{ color: 'yellow', marginLeft: '5px' }}></i>
                 </p>
                 <button
-                  onClick={() => handleClick(item)}
+                  onClick={() => handleAddToCart(item)}
                   disabled={addedToCart.includes(item.id)}
                   className={addedToCart.includes(item.id) ? 'added' : ''}
                 >
                   {addedToCart.includes(item.id) ? 'Added To Cart' : 'Add To Cart'}
                 </button>
-                {addedToCart.includes(item.id) && (
+                {showPopup && popupItemId === item.id && (
                   <div className='popup'>
                     <p className='popup-p'>Item added to cart successfully!</p>
                   </div>
