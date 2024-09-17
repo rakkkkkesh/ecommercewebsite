@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="footer-section">
           <h2 className="footer-title">Company</h2>
           <ul className="footer-links">
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-            <li><a href="/faq">FAQ</a></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/faq">FAQ</Link></li>
           </ul>
         </div>
 
@@ -28,35 +28,35 @@ const Footer = () => {
         <div className="footer-section">
           <h2 className="footer-title">Follow Us</h2>
           <div className="social-media-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <Link to="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            </Link>
+            <Link to="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            </Link>
+            <Link to="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-instagram"></i>
-            </a>
-            
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            </Link>
+
+            <Link to="https://linkedin.com" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin-in"></i>
-            </a>
+            </Link>
           </div>
         </div>
 
-        <div className="footer-section">
-          <h2 className="footer-title">Contact Us</h2>
-          <div>
-          <p className="footer-contact">Email: support@example.com</p>
-          <p className="footer-contact">Phone: 1-800-123-4567</p>
-          <p className="footer-contact">Address: 1234 E-commerce St, Shop City, EC 12345</p>
+          <div className="footer-section">
+            <h2 className="footer-title">Contact Us</h2>
+            <div>
+              <p className="footer-contact">Email: support@example.com</p>
+              <p className="footer-contact">Phone: 1-800-123-4567</p>
+              <p className="footer-contact">Address: 1234 E-commerce St, Shop City, EC 12345</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Made With💖. All rights reserved.</p>
-      </div>
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Made With💖. All rights reserved.</p>
+        </div>
     </footer>
   );
 };
